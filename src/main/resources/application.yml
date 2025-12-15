@@ -1,6 +1,12 @@
 spring:
   application:
     name: ai-agent
+  profiles:
+    active: local
+server:
+  port: 8082
+  servlet:
+    context-path: /api
 springdoc:
   swagger-ui:
     path: /swagger-ui.html
@@ -16,7 +22,3 @@ knife4j:
   enable: true
   setting:
     language: zh_cn
-server:
-  port: 8082
-  servlet:
-    context-path: /api
